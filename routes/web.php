@@ -19,7 +19,7 @@ Route::get('/guest/characters', 'Guest\CharacterController@index')->name('charac
 Route::get('/guest/characters/{character}', 'Guest\CharacterController@show')->name('characters.show');
 
 Route::get('/', function () {
-    $comic_list = config('comic_list');
+    $comic_list = config('db');
     return view('comics', ['comic_list' => $comic_list] );
 })->name('comics');
 
@@ -58,7 +58,7 @@ Route::get('/shop', function () {
 
 // comic single page
 Route::get('/comics/{id}', function ($id) {
-    $comic_list = config('comic_list');
+    $comic_list = config('db');
 
     if(is_numeric($id) && ($id < count($comic_list) && $id >= 0)){
 

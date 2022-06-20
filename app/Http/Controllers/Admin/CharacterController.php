@@ -58,6 +58,7 @@ class CharacterController extends Controller
     public function edit(Character $character)
     {
         //
+        return view('admin.characters.edit', compact('character'));
     }
 
     /**
@@ -70,6 +71,9 @@ class CharacterController extends Controller
     public function update(Request $request, Character $character)
     {
         //
+        $data = $request->all();
+        $character->update($data);
+        return redirect()->route('admin.characters.index');
     }
 
     /**
