@@ -1,0 +1,192 @@
+
+.single-comic{
+    min-width: 918px;
+    #jumbotron{
+        height: 400px;
+        background-image: url("../images/jumbotron.jpg");
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .blue-band{
+        position: relative;
+        height: 75px;
+        background-color: $mainBlueColor;
+
+        .figure{
+            position: absolute;
+            bottom: 20px;
+            left: 30%;
+            transform: translateX(-50%);
+            border: 1px solid white;
+
+            .type{
+                position: inherit;
+                left: 0;
+                top: 0;
+                padding: 2.5px 5px;
+
+                text-transform: uppercase;
+                font-size: .9rem;
+                color: white;
+                background-color: lighten($mainBlueColor, 17.5%);
+            }
+
+            .view-gallery{
+                position: absolute;
+                bottom: 0;
+                padding: 2.5px 5px;
+                width: 100%;
+
+
+                text-transform: uppercase;
+                text-align:center;
+                font-size: .9rem;
+                color: white;
+                background-color: lighten($mainBlueColor, 17.5%);
+            }
+        }
+    }
+
+    .main-content{
+
+        .comic-description{
+
+            display: flex;
+            padding: 50px 175px 0;
+
+
+            .left-side{
+
+                padding-right: 25px;
+                padding-bottom: 25px;
+
+                h2{
+                    color:$mainBlueColor ;
+                    padding-top: 1.5rem;
+                }
+                .availability{
+                    display: flex;
+                    background-color: $availableColor;
+                    color: rgba($color: #fff, $alpha: .8);
+                    border-bottom: 0.5px solid black ;
+                    justify-content: space-between;
+                    margin: 15px 0;
+
+                    .status{
+                        display: flex;
+                        justify-content: space-between;
+                        flex-grow: 1;
+                        padding: 5px;
+                        p{
+                            text-transform: uppercase;
+                            font-weight: 600;
+                        }
+
+
+                    }
+                    .check{
+                        padding: 5px;
+                        border-left: 0.5px solid black;
+                        cursor: pointer;
+
+                        p{
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+            .right-side{
+                h3{
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    text-align: right;
+                }
+            }
+        }
+
+        .comic-spec{
+            display:flex;
+            padding: 0 175px 50px;
+
+            background-color: #f6f6f6;
+
+            h2{
+                padding: 50px 0;
+                border-bottom: 1px solid lightgrey;
+
+            }
+
+            a{
+                color: $mainBlueColor;
+                text-decoration: none;
+            }
+
+            p{
+                text-align: end;
+
+            }
+
+
+            .left-side{
+                flex-basis: calc(100% / 2);
+                padding-right: 7.5px;
+                div{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 20px 0;
+                    border-bottom: 1px solid lightgrey;
+
+
+                    h5{
+
+                        flex-basis: 110px;
+                    }
+
+                    p{
+                        flex-basis: calc(100% - 110px);
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                    }
+                }
+
+            }
+
+            .right-side{
+                flex-basis: calc(100% / 2);
+                padding-left: 7.5px;
+
+                div{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 20px 0;
+
+                    border-bottom: 1px solid lightgrey;
+
+                    h5{
+
+                        flex-basis: 150px;
+                    }
+
+                    p{
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+
+        }
+
+
+    }
+    .shop_banner{
+        background-color: #f6f6f6;
+        img{
+            filter: brightness(0.8);
+            max-width: 40px;
+
+        }
+    }
+}

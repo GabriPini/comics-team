@@ -1,0 +1,87 @@
+.comic-section{
+    min-width: 918px;
+    #jumbotron{
+        background-image: url("../images/jumbotron.jpg");
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 400px;
+    }
+
+    #main-content{
+        position: relative;
+        padding: 40px 150px;
+        background-color: $contentBgColor;
+        color: $whiteMainColor;
+
+        .label{
+            position: absolute;
+            top: -12.5px;
+            height: 40px;
+
+            display: inline-block;
+            background-color: $mainBlueColor;
+            padding: 0 15px;
+
+            h4{
+                font-size: 1rem;
+                text-transform: uppercase;
+                line-height: 40px;
+            }
+        }
+
+
+
+            .comic-cover{
+                padding: 10px;
+                margin-bottom: 15px;
+
+                a{
+                    text-decoration: none;
+                    color:$whiteMainColor ;
+                }
+
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: top;
+
+                }
+
+                p{
+                    text-align: center;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                }
+            }
+
+
+        button{
+            text-align: center;
+            color: $whiteMainColor;
+            background-color: $mainBlueColor;
+            border: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            padding: 10px 50px;
+        }
+    }
+
+    #buy-content{
+        height: 150px;
+        background-color: $mainBlueColor;
+
+        span{
+
+            color: white;
+            font-size: 0.7rem;
+        }
+
+        img{
+            width: 50px;
+            max-height: 60px;
+        }
+    }
+}
