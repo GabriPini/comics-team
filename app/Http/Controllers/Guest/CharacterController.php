@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Guest;
-
+use App\Http\Controllers\Controller;
 use App\Models\Character;
 use Illuminate\Http\Request;
 
@@ -28,5 +28,5 @@ class CharacterController extends Controller
         //
     }
 
-    
+
 }
