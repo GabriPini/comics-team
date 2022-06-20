@@ -12,7 +12,7 @@
 
         <ul>
             <li><a href="#"><img src="{{ asset('images/dc-logo.png') }}" alt="dc-logo"></a></li>
-            <li><a class="{{Route::currentRouteName() === 'characters' ? 'active' : '' }}" href="{{ route('characters') }}">characters</a></li>
+            <li><a class="{{Route::currentRouteName() === 'characters' ? 'active' : '' }}" href="{{route('characters.index')}}">characters</a></li>
             <li><a class="{{Route::currentRouteName() === 'comics'  || Route::currentRouteName() === 'comic' ? 'active' : '' }}" href="{{ route('comics') }}">comics</a></li>
             <li><a class="{{Route::currentRouteName() === 'movies' ? 'active' : '' }}" href="{{ route('movies') }}">movies</a></li>
             <li><a class="{{Route::currentRouteName() === 'tv' ? 'active' : '' }}" href="{{ route('tv') }}">tv</a></li>
