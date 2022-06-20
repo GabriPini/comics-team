@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/characters', function () {
-    return view('characters');
-})->name('characters');
+Route::resource('/admin/characters', 'Admin\CharacterController');
+
+Route::get('/guest/characters', 'Guest\CharacterController@index')->name('characters.index');
+Route::get('/guest/characters/{character}', 'Guest\CharacterController@show')->name('characters.show');
 
 Route::get('/', function () {
     $comic_list = config('comic_list');
