@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', '{{$character["title"]}}')
+@section('title', '{{$character->name}}')
 
 
 
@@ -19,10 +19,9 @@
             <div class="comic-description">
                 <div class="left-side">
 
-                    <h2>{{ $character->title }}</h2>
+                    <h2>{{ $character->name }}</h2>
                     
-                    <p>{{ $comic["description"] }}</p>
-
+                    <p>{{$character->description}}</p>
                 </div>
                 <div class="right-side">
 
@@ -39,7 +38,7 @@
                         <h5>Art by:</h5>
                         <p>
                             
-                                <a href="#">{{ $characters->powers }}</a>,
+                                <a href="#">{{ $character->powers }}</a>,
 
                         </p>
                     </div>
