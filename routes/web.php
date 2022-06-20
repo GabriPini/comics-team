@@ -19,7 +19,7 @@ Route::get('/guest/characters', 'Guest\CharacterController@index')->name('charac
 Route::get('/guest/characters/{character}', 'Guest\CharacterController@show')->name('characters.show');
 
 Route::get('/', function () {
-    $comic_list = config('comic_list');
+    $comic_list = config('db');
     return view('comics', ['comic_list' => $comic_list] );
 })->name('comics');
 
