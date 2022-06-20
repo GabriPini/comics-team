@@ -25,7 +25,7 @@ class CharacterController extends Controller
      */
     public function show(Character $character)
     {
-        //
+        return view('guest.characters.show', compact('character'));
     }
 
 

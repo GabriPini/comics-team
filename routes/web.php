@@ -20,7 +20,7 @@ Route::get('/guest/characters/{character}', 'Guest\CharacterController@show')->n
 
 Route::get('/', function () {
     $comic_list = config('db');
-    return view('comics', compact('comic_list'));
+  return view('comics', compact('comic_list'));
 })->name('comics');
 
 Route::get('/movies', function () {
