@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -71,8 +71,21 @@ Route::get('/comics/{id}', function ($id) {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->group(function(){
+    //admin dashboard
+    Route::get('/', 'HomeController@index')->name('dashboard');//admin.dashboard
 
-Auth::routes();
+    Route::resource('comics','ComicController')->parameters([
+        'comics' => 'comic:slug'
+    ]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+    Route::resource('series','SerieController')->parameters(['series' => 'serie:slug'])->except(['show', 'create','edit']);
+
+    Route::resource('Artists','ArtistController')->parameters(['Artists' => 'tag:slug'])->except(['show', 'create','edit']);
+});
+
+//DEVE ESSERE L'ULTIMA ROTTA
+Route::get("{any?}", function(){
+    return view('guest.home');
+})->where("any",".*");
+
