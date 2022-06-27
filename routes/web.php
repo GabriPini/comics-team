@@ -68,3 +68,11 @@ Route::get('/comics/{id}', function ($id) {
 
     abort('404');
 })->name('comic');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
